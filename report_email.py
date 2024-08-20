@@ -20,7 +20,7 @@ for file in os.listdir(descriptions):
 paragraph_joined = "<br/><br/>".join(paragraph)
 
 def main():
-    reports.generate(descriptions + "processed.pdf", "Processed Update on " + date, paragraph_joined)
+    reports.generate("/tmp/processed.pdf", "Processed Update on " + date, paragraph_joined)
 
 if __name__ == "__main__":
     main()
