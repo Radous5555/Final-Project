@@ -6,4 +6,4 @@ The assessment involved writing Python scripts to:
 2.  Convert text data to json.
 3.  Submit the results to API endpoint.
 4.  Generate and send a PDF report by email.
-5.  Monitor the health of the machine.
+5.  Monitor the health of the machine and send alerts by email.
