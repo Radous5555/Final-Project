@@ -5,7 +5,6 @@ import psutil
 import emails
 import socket
 
-mail_url = "IP.ADDY.GOES.HERE/webmail"
 sender = "automation@example.com"
 recipient = "student@example.com"
 body = "Please check your system and resolve the issue as soon as possible."
@@ -30,19 +29,19 @@ def check_localhost():
 if not check_cpu_usage():
     subject = "Error - CPU usage is over 80%"
     message = emails.generate_error_report(sender, recipient, subject, body)
-    emails.send_email(message, mail_url)
+    emails.send_email(message)
 
 if not check_disk_usage():
     subject = "Error - Available disk space is less than 20%"
     message = emails.generate_error_report(sender, recipient, subject, body)
-    emails.send_email(message, mail_url)
+    emails.send_email(message)
 
 if not check_memory_usage():
     subject = "Error - Available memory is less than 100MB"
     message = emails.generate_error_report(sender, recipient, subject, body)
-    emails.send_email(message, mail_url)
+    emails.send_email(message)
 
 if not check_localhost():
     subject = "Error - localhost cannot be resolved to 127.0.0.1"
     message = emails.generate_error_report(sender, recipient, subject, body)
-    emails.send_email(message, mail_url)
+    emails.send_email(message)

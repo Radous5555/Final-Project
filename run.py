@@ -8,9 +8,7 @@ import json
 descriptions = os.getcwd() + "/supplier-data/descriptions/"
 
 """ paste the url here """
-url = "IP.ADDY.GOES.HERE/fruits"
-
-data = []
+url = "IP.ADDY.GOES.HERE/fruits/"
 
 for file in os.listdir(descriptions):
     if file.endswith(".txt"):
@@ -19,8 +17,5 @@ for file in os.listdir(descriptions):
             lines = read_file.read().splitlines()
             weight = re.findall(r"\d+", lines[1])
             dictionary = {"name": lines[0], "weight": int(weight[0]), "description": lines[2],"image_name": name + ".jpeg"}
-            data.append(dictionary)
-
-data_json = json.dumps(data)
-data_sent = requests.post(url, json=data_json)
-print(data_sent.status_code)
+            data_sent = requests.post(url, json=dictionary)
+            print(data_sent.status_code)

@@ -6,7 +6,7 @@ import os
 directory = os.getcwd() + "/supplier-data/images/"
 
 """ paste the url here """
-url = "IP.ADDY.GOES.HERE/upload"
+url = "IP.ADDY.GOES.HERE/upload/"
 
 for new_image in os.listdir(directory):
     """ this will send all jpegs, regardless of whether or not they've already been uploaded """

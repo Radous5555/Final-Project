@@ -29,7 +29,7 @@ def generate_error_report(sender, recipient, subject, body):
   message.set_content(body)
   return message
 
-def send_email(message, IP_address):
-  mail_server = smtplib.SMTP(IP_address)
+def send_email(message):
+  mail_server = smtplib.SMTP("localhost")
   mail_server.send_message(message)
   mail_server.quit()

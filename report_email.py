@@ -8,8 +8,6 @@ import emails
 
 descriptions = os.getcwd() + "/supplier-data/descriptions/"
 pdf_path = "/tmp/processed.pdf"
-""" Insert mail server address here """
-mail_url = "IP.ADDY.GOES.HERE/webmail"
 today = date.today()
 date = today.strftime("%B %d, %Y")
 
@@ -29,7 +27,7 @@ def main():
     subject = "Upload Completed - Online Fruit Store"
     body = "All fruits are uploaded to our website successfully. A detailed list is attached to this email."
     message = emails.generate_email(sender, recipient, subject, body, pdf_path)
-    emails.send_email(message, mail_url)
+    emails.send_email(message)
 
 if __name__ == "__main__":
     main()
