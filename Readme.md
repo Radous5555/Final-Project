@@ -7,3 +7,5 @@ The assessment involved writing Python scripts to:
 3.  Submit the results to API endpoint.
 4.  Generate and send a PDF report by email.
 5.  Monitor the health of the machine and send alerts by email.
+
+I plan to update this repository over time as I advance my knowledge.
